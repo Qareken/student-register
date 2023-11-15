@@ -5,18 +5,23 @@ import com.example.registrationStudent.event.UserCreatedEvent;
 import com.example.registrationStudent.event.UserDeletedEvent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
+
 @Data
 @AllArgsConstructor
+
 public class Publisher {
     private final ApplicationEventPublisher publisher;
-    private final Map<String, Student> studentMap = new HashMap<>();
+    private  final Map<String, Student> studentMap;
+    private final Logger logger = LoggerFactory.getLogger(Publisher.class);
     public void createStudent(String type, Student student){
         studentMap.put(student.getId(), student);
         publisher.publishEvent(new UserCreatedEvent(type, student));
@@ -27,10 +32,20 @@ public class Publisher {
     }
 
     public void clearStudents() {
-        studentMap.clear();
-        lookThroughStudent();
+        logger.info("clearStudents in publisher called....");
+        synchronized (studentMap){
+            try {
+                studentMap.clear();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        logger.info("after clear student map size "+ studentMap.size());
+
     }
     public void lookThroughStudent(){
-        studentMap.values().forEach(System.out::println);
+        logger.info("lookThrough studentMap size "+studentMap.size());
+        if(!studentMap.isEmpty())
+            studentMap.values().forEach(System.out::println);
     }
 }

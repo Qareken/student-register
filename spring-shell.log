@@ -1,0 +1,37 @@
+1699865331770:addStudent --firstName Aziz --lastName Auezov --30
+1699865385055:Add --firstName Aziz --lastName Auezov --30
+1699865420679:Add Student --firstName Aziz --lastName Auezov --30
+1699865534713:addStudent --firstName Aziz --lastName Auezov --age 30
+1699865872083:add --Aziz --Auezov --33
+1699865906412:add --firstName Aziz --lastName Auezov --age 30
+1699866101812:add --f Aziz --l Auezov --a 30
+1699867619375:add --f Aziz --l Auezov -a 30
+1699867637980:add --f Aziz --l Auezov --a 30
+1699867655373:add --f Mexriban --l Qurbanova --a 30
+1699867679731:delete --id c5f361b8-b3bb-4d65-8d85-2ec87ef83dbd
+1699935453470:list
+1699935479847:add --f Aziz --l Auezov --30
+1699935491687:add --f Aziz --l Auezov --a 30
+1699935594463:add --f Mexriyban --l Kurbanova --a 30
+1699935597099:list
+1699935621955:delete --id 39f482e2-f31b-4391-b640-a2eb34b03b82
+1699935625141:list
+1699935628630:clear
+1699935637208:list
+1699935641431:clear
+1699935842503:lis
+1699935844727:list
+1699935926055:add --f Aziz --l Auezov --a 30
+1699935943366:add --f Mexriyban --l Kurbanova --a 3-
+1699935954717:add --f Mexriyban --l Kurbanova --a 30
+1699935957741:list
+1699935972188:delete --id 4194e93c-5602-4767-8476-f77f7eb1f2b4
+1699935974595:list
+1699935982700:clear
+1699935984140:list
+1699936103427:add --f Auezov --l Aziz --a 30
+1699936108797:clear
+1699936121255:list
+1699944347750:add --f Auezov --l Aziz --a 30
+1699944378759:add --f Aziz --l Auezov --a 30
+1699944382177:list

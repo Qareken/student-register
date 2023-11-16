@@ -32,15 +32,7 @@ public class Publisher {
     }
 
     public void clearStudents() {
-        logger.info("clearStudents in publisher called....");
-        synchronized (studentMap){
-            try {
-                studentMap.clear();
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-        logger.info("after clear student map size "+ studentMap.size());
+      studentMap.clear();
 
     }
     public void lookThroughStudent(){
